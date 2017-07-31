@@ -1,0 +1,78 @@
+<template>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Profile</h3>
+    </div>
+    <div class="panel-body">
+      <form role="form" class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-3 control-label">First Name</label>
+          <div class="col-sm-9">
+            <input type="text" placeholder="first name" class="form-control" value.bind="person.firstName">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Last Name</label>
+          <div class="col-sm-9">
+            <input type="text" placeholder="last name" class="form-control" value.bind="person.lastName">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Email</label>
+          <div class="col-sm-9">
+            <input type="text" placeholder="email" class="form-control" value.bind="person.email">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Phone Number</label>
+          <div class="col-sm-9">
+            <input type="text" placeholder="phone number" class="form-control" value.bind="person.phone">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Mobile Phone</label>
+          <div class="col-sm-9">
+            <input type="text" placeholder="mobile number" class="form-control" value.bind="person.mobile">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Job/Role</label>
+          <div class="col-sm-9">
+            <input type="text" placeholder="job / role" class="form-control" value.bind="person.jobRole">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">is user</label>
+          <div class="col-sm-9">
+            <!--input type="checkbox" placeholder="is user" class="form-control" value.bind="person.isUser"-->
+            <input type="checkbox" checked.bind="person.isUser" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Password</label>
+          <div class="col-sm-9">
+            <input type="text" disabled="${person.isUser ? '' : 'disabled'}" placeholder="no password set" class="form-control" value.bind="person.password">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Modification Date</label>
+          <div class="col-sm-9">
+            <input type="text" placeholder="modification Date" class="form-control" value.bind="person.Date">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="button-bar">
+    <button class="btn btn-success" click.delegate="save()" disabled.bind="!canSave">Save</button> <!-- canSave ist eine get-Methode, save() eine normale
+  </div>
+</template>

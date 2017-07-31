@@ -1,0 +1,20 @@
+Unable to load package metadata (package.json) of text:
+[22:30:06] Error: packageRoot property not defined for the "text" package. It is recommended to define the packageRoot for packages outside the node_modules folder, so that the files end up inthe correct bundle
+
+
+
+npm install text
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+-> Brachte nix
+
+[22:39:48] gulp-typescript: ts(tsProject) has been deprecated - use .pipe(tsProject()) instead
+[22:39:48] As of gulp-typescript 3.0, .pipe(ts(tsProject)) should be written as .pipe(tsProject()).
+[22:39:48] More information: http://dev.ivogabe.com/gulp-typescript-3/
+
+npm install typescript --save-dev
+...
++ typescript@2.4.2
+added 115 packages and updated 1 package in 23.689s
+

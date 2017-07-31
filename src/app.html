@@ -1,0 +1,24 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./styles.css"></require>
+  <require from="./person-list"></require>    <!-- custom element -->
+                                              <!--  views are encapsulated, just like modules. This makes the person-list visible from within this view. -->
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <i class="fa fa-user"></i>
+        <span>Persons</span>
+      </a>
+    </div>
+  </nav>
+
+  <loading-indicator loading.bind="router.isNavigating || api.isRequesting"></loading-indicator>
+
+  <div class="container">
+    <div class="row">
+      <person-list class="col-md-4"></person-list>  <!-- custom element, via require eingebunden -->
+      <router-view class="col-md-8"></router-view>  <!-- router-view is provided by Aurelia, where the router should render the current route -->
+    </div>
+  </div>
+</template>
